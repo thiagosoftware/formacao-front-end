@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <!-- Formulários Notes -->
+    <!-- A tag <form> </form> cria e delimita o formulário -->
+    <!-- Label -> Descreve os inputs -->
+    <!-- Input -> É a tag que inserimos dados, temos vários tipos, por exemplo: number, email, text e etec. -->
+
+    <!-- Atributos da tag form -->
+    <!-- action -> Arquivo/Página que os dados serão enviados. -->
+    <!-- method -> GET ou POST, receber ou enviar dados. -->
+    <!-- Exemplo: -->
+    <!-- <form action="pasta/arquivo-que-vai-receber" method="get"></form> -->
+
+    <h2>Formulário</h2>
+    <form action="register.php" method="GET">
+        <div>
+            <label>Nome:</label>
+            <input type="text">
+        </div>
+
+        <!-- Atributo name -->
+        <div>
+            <!-- Atributo label -->
+            <label for="age">Idade</label>
+            <input type="text" name="age">
+        </div>
+
+        <!-- Select -->
+        <div>
+            <label for="job">Selecione sua profissão:</label>
+            <select name="job">
+                <option value="programador">Programador</option>
+                <option value="administrador">Administrador</option>
+                <option value="analista-rh">Analista de RH</option>
+                <option value="bancario">Bancário</option>
+            </select>
+        </div>
+
+        <!-- Selected -->
+
+        <div>
+            <label for="contract">Eu li e aceito os <a href="#">termos do contrato</a>:</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+
+        <!-- Múltiplas opções -->
+        <div>
+            <label for="items">
+                <select name="items" multiple>
+                    <option value="pera">Pêra</option>
+                    <option value="arroz">Arroz</option>
+                    <option value="feijao">Feijão</option>
+                    <option value="Macarrão">Macarrão</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Text área -->
+        <div>
+            <label for="comment">Escreva abaixo seu feedback:</label>
+            <textarea name="comment" cols="30" rows="10"></textarea>
+        </div>
+
+        <!-- Fildset e legend -->
+
+        <div>
+            <Fieldset>
+                <legend>Preencha as suas informações:</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname">
+                <label for="lastname">Sobrenome:</label>
+                <input type="text" name="lastname">
+            </Fieldset>
+        </div>
+
+        <!-- Datalist -->
+        <div>
+            <label for="flavor">Escolha o sabor:</label>
+            <input type="text" name="flavor" list="flavor">
+            <datalist id="flavor">
+                <option value="baunilha">Baunilha</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="pistache">Pistache</option>
+                <option value="misto">Misto de Baunilha e Pistache</option>
+            </datalist>
+        </div>
+
+        <!-- Senha -->
+
+        <div>
+            <label for="password">Digite sua senha:</label>
+            <input type="password" name="password">
+        </div>
+
+        <!-- Envio de formulário -->
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
