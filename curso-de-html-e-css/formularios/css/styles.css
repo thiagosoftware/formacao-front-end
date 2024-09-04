@@ -1,12 +1,18 @@
 body {
-    padding-bottom: 500px;
+  padding-bottom: 500px;
 }
 
 div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 div input,
 div label {
-    display: block;
+  display: block;
+}
+
+.radio label,
+.radio input,
+.radio span {
+    display: inline-block;
 }
